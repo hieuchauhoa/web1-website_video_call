@@ -1,0 +1,764 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#banner
+/*PHAN DAU CHUYEN THANH SLIDE*/
+
+{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #009688), /* dung trai mau banner*/
+    url("https://cdn.glitch.com/4d23ca4e-f0a7-48dd-80ca-0fba39c976a5%2Fbanner1.jpg?v=1605977630106");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.logo
+/* LOGO GOC TRAI*/
+
+{
+    width: 140px;
+    position: absolute;
+    /* DINH VI TUYET DOI*/
+    top: 4%;
+    left: 10%;
+}
+
+.banner-text {
+    text-align: center;
+    color: #fff;
+    padding-top: 270px
+}
+
+.banner-text h1 {
+    font-size: 100px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.banner-text h1:hover {
+    color: rgba(48, 236, 11, 0.5);
+}
+
+.banner-text p {
+    font-size: 20px;
+    font-style: italic;
+    /*IN NGHIENG */
+    font-family: 'Inter', sans-serif;
+}
+
+.banner-text p:hover {
+    color: rgba(16, 190, 10, 0.5);
+}
+
+.banner-btn {
+    margin: 70px auto 0;
+}
+
+
+/*-------PHẦN BUTTON NEON-----*/
+
+.banner-btn a {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    margin-left: 20px;
+    border-radius: 5px;
+    background-color: rgba(243, 241, 240, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+    z-index: 1;
+}
+
+.banner-btn a:hover {
+    color: #bd2e1b;
+}
+
+.banner-btn a:active {
+    color: #000000;
+    background: #f3b121;
+    box-shadow: 0 0 10px #f35221, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 1s;
+}
+
+.banner-btn a span {
+    position: absolute;
+    display: block;
+}
+
+.banner-btn a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #e61111);
+}
+
+.banner-btn a:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+
+.banner-btn a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #e9da10);
+}
+
+.banner-btn a:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.banner-btn a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #100dd8);
+}
+
+.banner-btn a:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.banner-btn a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #c73c11);
+}
+
+.banner-btn a:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+
+/* PHẦN MENU */
+
+#sideNav {
+    width: 235px;
+    height: 100vh;
+    padding-top: 35px;
+    padding-left: 0px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    z-index: 2;
+    transition: 0.5s;
+}
+
+#sideNav nav ul {
+    padding-left: 5px;
+}
+
+#sideNav nav ul li {
+    list-style-type: none;
+    margin: 50px 20px;
+}
+
+#sideNav nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+#logomenu {
+    width: 50px;
+    height: 50px;
+    background: #009688;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#logomenu img {
+    width: 20px;
+    margin-top: 15px;
+}
+
+
+/*----------GIỚI THIỆU-----------*/
+
+#gioi_thieu {
+    width: 100%;
+    margin-top: 40px;
+    height: 100vh;
+    padding: 70px 0;
+    /* CÁCH THẺ TRÊN 70PX */
+    padding-right: -20px;
+}
+
+.tieu_de-text {
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.tieu_de-text p
+/* CHỮ GIỚI THIỆU */
+
+{
+    margin: auto;
+    font-size: 25px;
+    color: #009688;
+    font-weight: bold;
+    /* IN ĐẬM */
+    position: relative;
+    /* ĐỊNH VỊ - TƯƠNG ĐỐI */
+    z-index: 1;
+    /* LỚP */
+    display: inline-block;
+    /*GIỮ PHẦN CHÌM LẠI */
+}
+
+.tieu_de-text p::after
+/* CHỮ GIỚI THIỆU - PHẦN CHÌM*/
+
+{
+    content: '';
+    /* ĐỂ CHÈN NỘI DUNG ::after ĐƯỢC TẠO RA */
+    width: 60px;
+    height: 35px;
+    background: linear-gradient(#019587, #fff);
+    /* PHỐI MÀU 1 VÀ MÀU 2*/
+    position: absolute;
+    /* ĐỊNH VỊ - TUYỆT ĐỐI */
+    top: -20px;
+    left: 4px;
+    z-index: -1;
+    /* CHO LỚP CHÌM XUỐNG LỚP GIỚI THIỆU*/
+    transform: rotate(20deg);
+    /* ĐỘ NGHIÊNG */
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+.tieu_de-text h1 {
+    font-size: 50px;
+}
+
+.gioi_thieu-tt {
+    font-size: 20px;
+    text-align: left;
+}
+
+.gioi_thieu-box {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    /*BỐ CỤC LINH HOẠT*/
+    flex-wrap: wrap;
+    /*	Chỉ định rằng các mục linh hoạt sẽ bọc nếu cần thiết */
+    align-items: center;
+    /*	Các mục được đặt ở trung tâm của container */
+    text-align: center;
+    /*  CĂN GIỮA */
+}
+
+.gioi_thieu-td {
+    flex-basis: 40%;
+    /* ĐỘ DÀI BAN ĐẦU CỦA MỤC LINH HOẠT */
+}
+
+.gioi_thieu-anh {
+    flex-basis: 60%;
+    margin: auto;
+}
+
+.gioi_thieu-anh img {
+    width: 90%;
+    border-radius: 10px;
+    /* BO GÓC */
+}
+
+.gioi_thieu-desc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+
+/*---BOX2-----*/
+
+.gioi_thieu-box2 {
+    width: 80%;
+    padding-top: 50px;
+    margin: auto;
+    display: flex;
+    /*BỐ CỤC LINH HOẠT*/
+    flex-wrap: wrap;
+    /*	Chỉ định rằng các mục linh hoạt sẽ bọc nếu cần thiết */
+    align-items: center;
+    /*	Các mục được đặt ở trung tâm của container */
+    text-align: center;
+    /*  CĂN GIỮA */
+}
+
+.gioi_thieu-1 {
+    flex-basis: 25%;
+    /* ĐỘ DÀI BAN ĐẦU CỦA MỤC LINH HOẠT */
+}
+
+.gioi_thieu-2 {
+    flex-basis: 25%;
+    /* ĐỘ DÀI BAN ĐẦU CỦA MỤC LINH HOẠT */
+}
+
+.gioi_thieu-3 {
+    flex-basis: 25%;
+    /* ĐỘ DÀI BAN ĐẦU CỦA MỤC LINH HOẠT */
+}
+
+.gioi_thieu-4 {
+    flex-basis: 25%;
+    /* ĐỘ DÀI BAN ĐẦU CỦA MỤC LINH HOẠT */
+}
+
+.gioi_thieu_chung {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.gioi_thieu_chung h1 {
+    font-weight: 550;
+    font-size: 50px;
+}
+
+.gioi_thieu_chung p {
+    font-size: 30px;
+}
+
+
+/*------------PHẦN TÍNH NĂNG-------------------*/
+
+#tinh_nang {
+    width: 100%;
+    margin-top: 70px;
+    height: 50vh;
+    padding: 70px 0;
+    background: #F4F4F8;
+}
+
+.tinh_nang-box {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    /*BỐ CỤC LINH HOẠT*/
+    flex-wrap: wrap;
+    /*	Chỉ định rằng các mục linh hoạt sẽ bọc nếu cần thiết */
+    align-items: center;
+    /*	Các mục được đặt ở trung tâm của container */
+    text-align: center;
+    /*  CĂN GIỮA */
+}
+
+.tinh_nang-box-1 {
+    flex-basis: 50%;
+    display: flex;
+    /*BỐ CỤC LINH HOẠT*/
+    flex-wrap: wrap;
+    align-items: center;
+    /*	Các mục được đặt ở trung tâm của container */
+    text-align: center;
+}
+
+.tinh_nang-1 {
+    flex-basis: 50%;
+    /* ĐỘ DÀI BAN ĐẦU CỦA MỤC LINH HOẠT */
+}
+
+.tinh_nang-2 {
+    flex-basis: 50%;
+    /* ĐỘ DÀI BAN ĐẦU CỦA MỤC LINH HOẠT */
+}
+
+.tinh_nang-box-2 {
+    flex-basis: 50%;
+    display: flex;
+    /*BỐ CỤC LINH HOẠT*/
+    flex-wrap: wrap;
+    align-items: center;
+    /*	Các mục được đặt ở trung tâm của container */
+    text-align: center;
+}
+
+.tinh_nang-box-2 .tinh_nang-3 {
+    flex-basis: 50%;
+    /* ĐỘ DÀI BAN ĐẦU CỦA MỤC LINH HOẠT */
+}
+
+.tinh_nang-box-2 .tinh_nang-4 {
+    flex-basis: 50%;
+    /* ĐỘ DÀI BAN ĐẦU CỦA MỤC LINH HOẠT */
+}
+
+.cac_tinh_nang p {
+    font-size: 30px;
+}
+
+
+/*--PHẦN CÂU HỎI--*/
+
+#cau_hoi {
+    background-color: rgba(245, 240, 240, 0.5);
+    height: 580px;
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+#cau_hoi .tieu_de-text h1 {
+    font-size: 40px;
+    color: #009688;
+}
+
+.tieu_de-text {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.cau_hoi-box {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.box-ch {
+    flex-basis: 38%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+
+.box-ch img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.overlay {
+    width: 100%;
+    height: 86%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #009688);
+    opacity: 0;
+    transition: 1s;
+}
+
+.box-ch:hover .overlay {
+    opacity: 1;
+}
+
+.cau_hoi-desc {
+    width: 80%;
+    top: 30%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    cursor: pointer;
+    transition: 1s;
+}
+
+hr {
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+
+.cau_hoi-desc p {
+    font-size: 20px;
+}
+
+.box-ch:hover .cau_hoi-desc {
+    opacity: 1;
+}
+
+
+/* Code css phần khách hang */
+
+
+/* Slideshow container */
+
+#slideshow-container {
+    margin-top: 20px;
+    position: relative;
+    background-color: #f7f8f8;
+}
+
+#slideshow-container h1 {
+    text-align: center;
+    padding-top: 10px;
+    color: #2196f3;
+}
+
+#slideshow-container img {
+    width: 100%;
+    height: 620px;
+    border: 2px solid #08c05b;
+}
+
+
+/* Caption text */
+
+.text {
+    color: #f5f4f4;
+    font-size: 30px;
+    padding-bottom: 185px;
+    padding-left: 360px;
+    position: absolute;
+    bottom: 8px;
+    width: 78%;
+    text-align: center;
+}
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+
+/* .active {
+    background-color: #717171;
+  } */
+
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
+}
+
+
+/* PHẦN FOOTER */
+
+#footer {
+    margin-top: -30px;
+    height: 400px;
+    width: 100%;
+}
+
+.footertren {
+    width: 100%;
+    height: 200px;
+    margin-left: 0px;
+    background-color: #c5c1c1;
+    display: flex;
+    /*BỐ CỤC LINH HOẠT*/
+    flex-wrap: wrap;
+    /*	Chỉ định rằng các mục linh hoạt sẽ bọc nếu cần thiết */
+    align-items: center;
+    /*	Các mục được đặt ở trung tâm của container */
+    text-align: center;
+    /*  CĂN GIỮA */
+}
+
+#footertren-1 {
+    flex-basis: 33.3%;
+    /* ĐỘ DÀI BAN ĐẦU CỦA MỤC LINH HOẠT */
+}
+
+#footertren-2 {
+    flex-basis: 33.3%;
+    /* ĐỘ DÀI BAN ĐẦU CỦA MỤC LINH HOẠT */
+}
+
+#footertren-3 {
+    flex-basis: 33.3%;
+    /* ĐỘ DÀI BAN ĐẦU CỦA MỤC LINH HOẠT */
+}
+
+#footer .footerduoi #footerduoi-3 #email {
+    width: 190px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#footer .footerduoi #footerduoi-3 #email:hover {
+    border: 2px solid #c00808;
+}
+
+#footer .footerduoi #footerduoi-3 #button {
+    width: 50px;
+    height: 30px;
+    border-radius: 7px;
+}
+
+#footer .footerduoi #footerduoi-3 #button:hover {
+    border: 2px solid #c00808;
+    background-color: #2196f3;
+}
+
+#footer .footerduoi #footerduoi-3 #button:active {
+    background-color: #16bd40;
+    border: 2px solid #21be75;
+}
+
+#footer .footerduoi #footerduoi-3 .footertren_chung {
+    height: 150px;
+    background-color: #e5f1f0;
+    padding-top: 20px;
+}
+
+.footertren_chung h1 {
+    font-size: 27px;
+    padding-bottom: 15px;
+}
+
+.footertren_chung p {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+
+/* footer duoi */
+
+.footerduoi {
+    width: 100%;
+    height: 150px;
+    margin-top: 5px;
+    display: flex;
+    /*BỐ CỤC LINH HOẠT*/
+    flex-wrap: wrap;
+    /*	Chỉ định rằng các mục linh hoạt sẽ bọc nếu cần thiết */
+    align-items: center;
+    /*	Các mục được đặt ở trung tâm của container */
+    text-align: center;
+    /*  CĂN GIỮA */
+    border-top: 5px solid #2c08f7;
+}
+
+#footerduoi-1 {
+    flex-basis: 25%;
+    /* ĐỘ DÀI BAN ĐẦU CỦA MỤC LINH HOẠT */
+}
+
+#footerduoi-2 {
+    flex-basis: 25%;
+    /* ĐỘ DÀI BAN ĐẦU CỦA MỤC LINH HOẠT */
+}
+
+#footerduoi-3 {
+    flex-basis: 25%;
+    /* ĐỘ DÀI BAN ĐẦU CỦA MỤC LINH HOẠT */
+}
+
+#footerduoi-4 {
+    flex-basis: 25%;
+    /* ĐỘ DÀI BAN ĐẦU CỦA MỤC LINH HOẠT */
+}
+
+.footerduoi_chung {
+    background-color: #0a0a0a;
+    color: #fff;
+    height: 250px;
+    padding-top: 20px;
+}
+
+.footerduoi_chung h1 {
+    font-size: 21px;
+    padding-bottom: 15px;
+}
+
+.footerduoi_chung p {
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+.footerduoi #logolh a {
+    padding-left: 20px;
+}
+
+.footerduoi #logolh img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+.footerduoi #logolh a img:hover {
+    transform: rotate(160deg);
+    background-color: #16bd40;
+}
