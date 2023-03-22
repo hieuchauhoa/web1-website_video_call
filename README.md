@@ -12,7 +12,7 @@
 |  2  | 3119410439 | Minh Hiếu Calan Tog   |
 |  3  | 3119410321 | Nguyễn Thị Phượng     |
 |  4  | 3119410292 | Nguyễn Lê Tâm Như     |
-|  5  | 3119410439 | Huỳnh Như             |
+|  5  | 3119410293 | Huỳnh Như             |
 
 ## Yêu Cầu:
 
